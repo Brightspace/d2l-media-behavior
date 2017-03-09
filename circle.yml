@@ -6,14 +6,12 @@ test:
   override:
     - "true"
 
-dependencies:
-  post:
-    - curl -ks -u$ARTIFACTORY_USER:$ARTIFACTORY_PASS "https://d2lartifacts.artifactoryonline.com/d2lartifacts/api/npm/npm-local/auth/d2l" -o .npmrc
-
 deployment:
   master:
     branch: master
     owner: Brightspace
     commands:
+      - curl -ks -u$ARTIFACTORY_USER:$ARTIFACTORY_PASS "https://d2lartifacts.artifactoryonline.com/d2lartifacts/api/npm/npm-local/auth/d2l" -o .npmrc
       - npm install -g git+https://github.com/cmanzana/node-publish
+      - ls -la
       - publish

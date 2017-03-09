@@ -1,0 +1,156 @@
+<link rel="import" href="../iron-range-behavior/iron-range-behavior.html">
+
+<script>
+	var MediaBehaviorImpl = {
+		properties: {
+			src: {
+				type: String,
+				value: ''
+			},
+			preload: {
+				type: String,
+				value: 'auto'
+			},
+			autoPlay: {
+				type: Boolean,
+				value: false
+			},
+			currentTime: {
+				type: Number,
+				value: 0,
+				notify: true
+			},
+			duration: {
+				type: Number,
+				value: 0
+			}
+		},
+
+		listeners: {
+			'media.loadedmetadata': '_onCanPlay',
+			'media.playing': '_onPlaying',
+			'media.pause': '_onPause',
+			'media.ended': '_onEnd',
+			'media.error': '_onError'
+		},
+
+		ready: function() {
+			this.isPlaying = false;
+			this.canBePlayed = false;
+			this.ended = false;
+			this.percentComplete = 0;
+			this.seeking = false;
+			this.immediateValue = 0;
+			this.firstPlay = true;
+
+			var media = this.$.media;
+			media.volume = 1.0;
+		},
+
+		playPause: function(event) {
+			if (event) {
+				event.preventDefault();
+			}
+
+			var media = this.$.media;
+			if (this.canBePlayed) {
+				return this.isPlaying ? media.pause() : media.play();
+			} else if (this.preload === 'none') {
+				media.load();
+				media.play();
+			}
+		},
+
+		_getFormattedTime: function() {
+			return this._formatTime(this.firstPlay ? this.duration : this._getImmediateTime());
+		},
+
+		_getImmediateTime: function() {
+			return this.duration * (this.immediateValue / 100);
+		},
+
+		_formatTime: function(seconds) {
+			if (seconds === 0) {
+				return '0:00';
+			}
+
+			var minutes = Math.floor(seconds / 60);
+			var secondsLeft = String(Math.floor(seconds % 60));
+			return minutes + ':' + (secondsLeft.length < 2 ? '0' + secondsLeft : secondsLeft);
+		},
+
+		_onSeekStart: function() {
+			this.seeking = true;
+		},
+
+		_onSeekEnd: function() {
+			if (this.seeking) {
+				this._updatePlayPosition(this._getImmediateTime());
+				this.seeking = false;
+			}
+		},
+
+		_onCanPlay: function() {
+			this.canBePlayed = true;
+
+			var media = this.$.media;
+			this.duration = media.duration;
+
+			if (this.autoPlay) {
+				media.play();
+			}
+		},
+
+		_onPlaying: function() {
+			this.firstPlay = false;
+			this.ended = false;
+			this.isPlaying = true;
+			this._startProgressTimer();
+		},
+
+		_onPause: function() {
+			this.isPlaying = false;
+		},
+
+		_onEnd: function() {
+			this.ended = true;
+			this.isPlaying = false;
+		},
+
+		_onError: function() {
+
+		},
+
+		_updatePlayPosition: function(newTime) {
+			var media = this.$.media;
+			this.currentTime = media.currentTime = newTime;
+		},
+
+		_startProgressTimer: function() {
+			var self = this;
+
+			if (this.progressTimer) {
+				clearInterval(this.progressTimer);
+			}
+
+			this.progressTimer = setInterval(function() {
+				var media = self.$.media;
+				if (self.isPlaying) {
+					self.currentTime = media.currentTime;
+
+					if (!self.seeking) {
+						self.percentComplete = (self.currentTime / self.duration) * 100;
+					}
+				} else {
+					clearInterval(self.progressTimer);
+				}
+			}, 60);
+		},
+
+		_setPreload: function() {
+			return this.autoPlay ? 'auto' : this.preload;
+		}
+	};
+
+	MediaBehavior = [Polymer.IronRangeBehavior, MediaBehaviorImpl];
+</script>

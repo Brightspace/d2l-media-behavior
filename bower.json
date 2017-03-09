@@ -1,0 +1,17 @@
+{
+  "name": "d2l-media-behavior",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Brightspace/d2l-media-behavior",
+  "license": "UNLICENSED",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iron-range-behavior": "PolymerElements/iron-range-behavior#^1.0.0",
+    "polymer": "Polymer/polymer#^1.0.0"
+  }
+}

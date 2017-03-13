@@ -1,6 +1,6 @@
 {
   "name": "@d2l/media-behavior",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Polymer behavior for media players",
   "scripts": {
     "lint": "eslint *.html",

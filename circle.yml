@@ -2,10 +2,6 @@ machine:
   node:
     version: 4.3.0
 
-test:
-  override:
-    - "true"
-
 deployment:
   master:
     branch: master

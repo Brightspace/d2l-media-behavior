@@ -1,6 +1,6 @@
 {
   "extends": "brightspace/polymer-config",
   "globals": {
-    "MediaBehavior": true
+    "D2LMediaBehavior": true
   }
 }

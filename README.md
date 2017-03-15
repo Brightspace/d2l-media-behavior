@@ -15,7 +15,7 @@ A Polymer behavior for media players.
   		]
 	},
 	"resolvers": [
-  	"bower-art-resolver"
+		"bower-art-resolver"
 	]
 }
 ```
@@ -33,9 +33,3 @@ Polymer({
 	behaviors: [D2LMediaBehavior]
 });
 ```
-
-## Development
-
-* `npm install`
-* `npm start`
-* Visit http://localhost:9998/components/d2l-media-behavior/demo/

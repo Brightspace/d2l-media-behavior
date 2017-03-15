@@ -2,10 +2,10 @@
 
 A Polymer behavior for media players.
 
-## How To Use
+## Usage
 
-* Add `bower-art-resolver` to your `package.json`
-* Add a `.bowerrc` file to your project:
+* Install [bower-art-resolver](https://www.npmjs.com/package/bower-art-resolver).
+* Create a `.bowerrc` file in your project:
 ```
 {
 	"registry": {
@@ -19,15 +19,15 @@ A Polymer behavior for media players.
 	]
 }
 ```
-* Add `d2l-media-behavior` to `bower.json` with the appropriate version.
-* `npm install`
-* `bower install`
-* Import it into your Polymer component: 
+* Install `d2l-media-behavior` with Bower.
+* Run `npm install`
+* Run `bower install`
+* Import and use the behavior in a Polymer component:
 ```
 <link rel="import" href="path/to/bower_components/d2l-media-behavior/d2l-media-behavior.html">
-```
-* Use it in your Polymer component:
-```
+
+...
+
 Polymer({
 	is: 'my-media-component',
 	behaviors: [D2LMediaBehavior]

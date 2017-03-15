@@ -28,9 +28,10 @@ A Polymer behavior for media players.
 ```
 * Use it in your Polymer component:
 ```
-behaviors: [
-	D2LMediaBehavior
-]
+Polymer({
+	is: 'my-media-component',
+	behaviors: [D2LMediaBehavior]
+});
 ```
 
 ## Development

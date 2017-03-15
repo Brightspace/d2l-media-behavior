@@ -6,4 +6,4 @@ A Polymer behavior for media players.
 
 * `npm install`
 * `npm start`
-* Visit http://localhost:9998/components/d2l-audio/demo/
+* Visit http://localhost:9998/components/d2l-media-behavior/demo/

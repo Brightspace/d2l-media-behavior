@@ -1,4 +1,5 @@
 <link rel="import" href="../iron-range-behavior/iron-range-behavior.html">
+<link rel="import" href="../iron-ajax/iron-ajax.html">
 
 <script>
 	var MediaBehaviorImpl = {
@@ -7,11 +8,7 @@
 				type: String,
 				value: ''
 			},
-			preload: {
-				type: String,
-				value: 'auto'
-			},
-			autoPlay: {
+			autoLoad: {
 				type: Boolean,
 				value: false
 			},
@@ -23,8 +20,16 @@
 			duration: {
 				type: Number,
 				value: 0
+			},
+			requestSrc: {
+				type: Boolean,
+				value: false
 			}
 		},
+
+		observers: [
+			'_srcChanged(src, requestSrc)'
+		],
 
 		listeners: {
 			'media.loadedmetadata': '_onCanPlay',
@@ -36,7 +41,6 @@
 
 		ready: function() {
 			this.isPlaying = false;
-			this.canBePlayed = false;
 			this.ended = false;
 			this.percentComplete = 0;
 			this.seeking = false;
@@ -47,7 +51,41 @@
 			media.volume = 1.0;
 		},
 
-		playPause: function(event) {
+		_srcChanged: function(src, requestSrc) {
+			this.canBePlayed = false;
+			this.$.media.src = '';
+
+			if (!this.mediaUrlRequest) {
+				var mediaUrlRequest = document.createElement('iron-ajax');
+				mediaUrlRequest.contentType = 'application/json';
+				mediaUrlRequest.handleAs = 'json';
+				mediaUrlRequest.method = 'get';
+				this.mediaUrlRequest = mediaUrlRequest;
+			}
+
+			if (requestSrc && this.autoLoad) {
+				this.mediaUrlRequest.url = src;
+				this._requestMediaUrl(false);
+			} else if (!requestSrc) {
+				this.$.media.src = src;
+			}
+		},
+
+		_requestMediaUrl: function(playAfterLoad) {
+			var self = this;
+
+			return this.mediaUrlRequest.generateRequest().completes
+				.then(function(event) {
+					this.$.media.src = event.detail.response.url;
+					self.$.media.load();
+
+					if (playAfterLoad) {
+						self.$.media.play();
+					}
+				});
+		},
+
+		_playPause: function(event) {
 			if (event) {
 				event.preventDefault();
 			}
@@ -55,9 +93,13 @@
 			var media = this.$.media;
 			if (this.canBePlayed) {
 				return this.isPlaying ? media.pause() : media.play();
-			} else if (this.preload === 'none') {
-				media.load();
-				media.play();
+			} else if (!this.autoLoad) {
+				if (this.requestSrc) {
+					this._requestMediaUrl(true);
+				} else {
+					media.load();
+					media.play();
+				}
 			}
 		},
 
@@ -95,10 +137,6 @@
 
 			var media = this.$.media;
 			this.duration = media.duration;
-
-			if (this.autoPlay) {
-				media.play();
-			}
 		},
 
 		_onPlaying: function() {
@@ -147,8 +185,8 @@
 			}, 60);
 		},
 
-		_setPreload: function() {
-			return this.autoPlay ? 'auto' : this.preload;
+		_getPreload: function() {
+			return this.autoLoad ? 'auto' : 'none';
 		}
 	};
 

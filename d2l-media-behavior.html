@@ -76,7 +76,7 @@
 
 			return this.mediaUrlRequest.generateRequest().completes
 				.then(function(event) {
-					this.$.media.src = event.detail.response.url;
+					self.$.media.src = event.detail.response.url;
 					self.$.media.load();
 
 					if (playAfterLoad) {

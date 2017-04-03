@@ -6,7 +6,8 @@
     "lint": "eslint *.html",
     "postinstall": "bower install",
     "start": "polymer serve -p 9998",
-    "test": "npm run lint"
+    "test": "polymer test -l chrome",
+    "posttest": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,7 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "bower": "^1.7.7",
+    "bower-art-resolver": "2.0.6",
     "eslint": "^3.7.1",
     "eslint-config-brightspace": "^0.2.4",
     "eslint-plugin-html": "^1.5.3",

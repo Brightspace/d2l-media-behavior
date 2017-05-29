@@ -24,6 +24,11 @@
 			requestSrc: {
 				type: Boolean,
 				value: false
+			},
+			volume: {
+				type: Number,
+				value: 1.0,
+				observer: '_volumeChanged'
 			}
 		},
 
@@ -48,7 +53,7 @@
 			this.firstPlay = true;
 
 			var media = this.$.media;
-			media.volume = 1.0;
+			media.volume = this.volume;
 		},
 
 		_srcChanged: function(src, requestSrc) {
@@ -69,6 +74,10 @@
 			} else if (!requestSrc) {
 				this.$.media.src = src;
 			}
+		},
+
+		_volumeChanged: function(volume) {
+			this.$.media.volume = volume;
 		},
 
 		_requestMediaUrl: function(playAfterLoad) {

@@ -51,6 +51,7 @@
 			this.seeking = false;
 			this.immediateValue = 0;
 			this.firstPlay = true;
+			this.startedLoad = false;
 
 			var media = this.$.media;
 			media.volume = this.volume;
@@ -58,6 +59,7 @@
 
 		_srcChanged: function(src, requestSrc) {
 			this.canBePlayed = false;
+			this.startedLoad = false;
 			this.$.media.src = '';
 
 			if (!this.mediaUrlRequest) {
@@ -86,6 +88,7 @@
 			return this.mediaUrlRequest.generateRequest().completes
 				.then(function(event) {
 					self.$.media.src = event.detail.response.url;
+					this.startedLoad = true;
 					self.$.media.load();
 
 					if (playAfterLoad) {
@@ -105,7 +108,8 @@
 			} else if (!this.autoLoad) {
 				if (this.requestSrc) {
 					this._requestMediaUrl(true);
-				} else {
+				} else if (!this.startedLoad) {
+					this.startedLoad = true;
 					media.load();
 					media.play();
 				}

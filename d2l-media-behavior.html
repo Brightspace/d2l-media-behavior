@@ -123,7 +123,9 @@
 
 		_playHandler: function(playPromise) {
 			if (playPromise) {
-				playPromise.catch(error => this.fire('d2l-media-play-error', { error }));
+				playPromise.catch(function(error) {
+					this.fire('d2l-media-play-error', { error: error });
+				});
 			}
 		},
 

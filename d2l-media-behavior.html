@@ -45,14 +45,7 @@
 		},
 
 		ready: function() {
-			this.isPlaying = false;
-			this.ended = false;
-			this.percentComplete = 0;
-			this.seeking = false;
-			this.immediateValue = 0;
-			this.firstPlay = true;
-			this.startedLoad = false;
-
+			this._resetPlayer();
 			var media = this.$.media;
 			media.volume = this.volume;
 		},
@@ -74,8 +67,20 @@
 				this.mediaUrlRequest.url = src;
 				this._requestMediaUrl(false);
 			} else if (!requestSrc) {
+				this._resetPlayer();
 				this.$.media.src = src;
 			}
+		},
+
+		_resetPlayer: function() {
+			this.isPlaying = false;
+			this.ended = false;
+			this.percentComplete = 0;
+			this.seeking = false;
+			this.immediateValue = 0;
+			this.currentTime = 0;
+			this.startedLoad = false;
+			this.firstPlay = true;
 		},
 
 		_volumeChanged: function(volume) {

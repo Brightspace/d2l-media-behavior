@@ -97,7 +97,7 @@
 					self.$.media.load();
 
 					if (playAfterLoad) {
-						self.$.media.play();
+						return this._playHandler(self.$.media.play());
 					}
 				});
 		},
@@ -109,15 +109,21 @@
 
 			var media = this.$.media;
 			if (this.canBePlayed) {
-				return this.isPlaying ? media.pause() : media.play();
+				return this.isPlaying ? media.pause() : this._playHandler(media.play());
 			} else if (!this.autoLoad) {
 				if (this.requestSrc) {
 					this._requestMediaUrl(true);
 				} else if (!this.startedLoad) {
 					this.startedLoad = true;
 					media.load();
-					media.play();
+					return this._playHandler(media.play());
 				}
+			}
+		},
+
+		_playHandler: function(playPromise) {
+			if (playPromise) {
+				playPromise.catch(error => this.fire('d2l-media-play-error', { error }));
 			}
 		},
 

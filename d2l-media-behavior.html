@@ -8,6 +8,7 @@
 				type: String,
 				value: ''
 			},
+			type: String,
 			autoLoad: {
 				type: Boolean,
 				value: false
@@ -33,7 +34,7 @@
 		},
 
 		observers: [
-			'_srcChanged(src, requestSrc)'
+			'_srcChanged(src, type, requestSrc)'
 		],
 
 		listeners: {
@@ -50,10 +51,9 @@
 			media.volume = this.volume;
 		},
 
-		_srcChanged: function(src, requestSrc) {
+		_srcChanged: function(src, type, requestSrc) {
 			this.canBePlayed = false;
 			this.startedLoad = false;
-			this.$.media.src = '';
 
 			if (!this.mediaUrlRequest) {
 				var mediaUrlRequest = document.createElement('iron-ajax');
@@ -68,7 +68,7 @@
 				this._requestMediaUrl(false);
 			} else if (!requestSrc) {
 				this._resetPlayer();
-				this.$.media.src = src;
+				this._addSource(src, type);
 			}
 		},
 
@@ -92,7 +92,7 @@
 
 			return this.mediaUrlRequest.generateRequest().completes
 				.then(function(event) {
-					self.$.media.src = event.detail.response.url;
+					self._addSource(event.detail.response.url, event.detail.response.type);
 					this.startedLoad = true;
 					self.$.media.load();
 
@@ -100,6 +100,18 @@
 						return this._playHandler(self.$.media.play());
 					}
 				});
+		},
+
+		_addSource: function(src, type) {
+			if (src) {
+				var source = document.createElement('source');
+				source.src = src;
+				source.type = type;
+				source.addEventListener('error', error => {
+					this.sourceError = true;
+				});
+				Polymer.dom(this.$.media).appendChild(source);
+			}
 		},
 
 		_playPause: function(event) {
@@ -123,7 +135,7 @@
 
 		_playHandler: function(playPromise) {
 			if (playPromise) {
-				playPromise.catch(error => this.fire('d2l-media-play-error', { error }));
+				playPromise.catch(error => { this.sourceError = true; });
 			}
 		},
 

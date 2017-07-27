@@ -74,6 +74,13 @@
 				this.mediaUrlRequest.url = src;
 				this._requestMediaUrl(false);
 			} else if (!requestSrc) {
+				this.isPlaying = false;
+				this.ended = false;
+				this.percentComplete = 0;
+				this.seeking = false;
+				this.immediateValue = 0;
+				this.currentTime = 0;
+				this.firstPlay = true;
 				this.$.media.src = src;
 			}
 		},

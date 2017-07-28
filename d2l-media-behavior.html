@@ -93,11 +93,11 @@
 			return this.mediaUrlRequest.generateRequest().completes
 				.then(function(event) {
 					self.$.media.src = event.detail.response.url;
-					this.startedLoad = true;
+					self.startedLoad = true;
 					self.$.media.load();
 
 					if (playAfterLoad) {
-						return this._playHandler(self.$.media.play());
+						return self._playHandler(self.$.media.play());
 					}
 				});
 		},
@@ -122,9 +122,10 @@
 		},
 
 		_playHandler: function(playPromise) {
+			var self = this;
 			if (playPromise) {
 				playPromise.catch(function(error) {
-					this.fire('d2l-media-play-error', { error: error });
+					self.fire('d2l-media-play-error', { error: error });
 				});
 			}
 		},

@@ -12,6 +12,10 @@
 				type: Boolean,
 				value: false
 			},
+			autoplay: {
+				type: Boolean,
+				value: false
+			},
 			currentTime: {
 				type: Number,
 				value: 0,
@@ -214,6 +218,10 @@
 
 		_getPreload: function() {
 			return this.autoLoad ? 'auto' : 'none';
+		},
+
+		_getAutoplay: function() {
+			return this.autoplay;
 		}
 	};
 

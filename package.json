@@ -6,7 +6,7 @@
     "lint": "eslint *.html",
     "postinstall": "bower install",
     "start": "polymer serve -p 9998",
-    "test": "polymer test -l chrome",
+    "test": "wct -l chrome",
     "posttest": "npm run lint"
   },
   "repository": {

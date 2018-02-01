@@ -33,11 +33,19 @@
 				type: Number,
 				value: 1.0,
 				observer: '_volumeChanged'
+			},
+			mediaStatus: {
+				type: String,
+				value: 'ready'
+			},
+			mimeType: {
+				type: String,
+				value: ''
 			}
 		},
 
 		observers: [
-			'_srcChanged(src, requestSrc)'
+			'_srcChanged(src, requestSrc, autoLoad, mimeType)'
 		],
 
 		listeners: {
@@ -54,7 +62,7 @@
 			media.volume = this.volume;
 		},
 
-		_srcChanged: function(src, requestSrc) {
+		_srcChanged: function(src, requestSrc, autoLoad, mimeType) {
 			this.canBePlayed = false;
 			this.startedLoad = false;
 			this.$.media.src = '';
@@ -67,7 +75,11 @@
 				this.mediaUrlRequest = mediaUrlRequest;
 			}
 
-			if (requestSrc && this.autoLoad) {
+			if (mimeType === 'application/x-d2l-video') {
+				requestSrc = true;
+			}
+
+			if (requestSrc && autoLoad) {
 				this.mediaUrlRequest.url = src;
 				this._requestMediaUrl(false);
 			} else if (!requestSrc) {
@@ -96,7 +108,14 @@
 
 			return this.mediaUrlRequest.generateRequest().completes
 				.then(function(event) {
-					self.$.media.src = event.detail.response.url;
+					if (!event.response.url) {
+						self.mediaStatus = 'invalidManifest';
+						return;
+					}
+					if (event.response.status) {
+						self.mediaStatus = event.response.status;
+					}
+					self.$.media.src = event.response.url;
 					self.startedLoad = true;
 					self.$.media.load();
 

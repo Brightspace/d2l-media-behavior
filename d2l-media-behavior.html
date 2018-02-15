@@ -122,6 +122,9 @@
 					if (playAfterLoad) {
 						return self._playHandler(self.$.media.play());
 					}
+				})
+				.catch(function() {
+					self.mediaStatus = 'error';
 				});
 		},
 

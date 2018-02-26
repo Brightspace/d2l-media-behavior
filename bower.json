@@ -11,8 +11,11 @@
     "tests"
   ],
   "dependencies": {
-    "iron-ajax": "PolymerElements/iron-ajax#^1.4.3",
-    "iron-range-behavior": "PolymerElements/iron-range-behavior#^1.0.0",
+    "iron-ajax": "PolymerElements/iron-ajax#^2.1.2",
+    "iron-range-behavior": "PolymerElements/iron-range-behavior#^2.1.0",
     "polymer": "Polymer/polymer#^1.0.0"
+  },
+  "resolutions": {
+    "webcomponentsjs": "^0.7"
   }
 }

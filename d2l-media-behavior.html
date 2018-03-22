@@ -2,7 +2,10 @@
 <link rel="import" href="../iron-ajax/iron-ajax.html">
 
 <script>
-	var MediaBehaviorImpl = {
+	'use strict';
+	window.D2L = window.D2L || {};
+	/** @polymerBehavior window.D2L.MediaBehavior */
+	window.D2L.MediaBehaviorImpl = {
 		properties: {
 			src: {
 				type: String,
@@ -41,6 +44,34 @@
 			mimeType: {
 				type: String,
 				value: ''
+			},
+			isPlaying: {
+				type: Boolean,
+				value: false
+			},
+			ended: {
+				type: Boolean,
+				value: false
+			},
+			percentComplete: {
+				type: Number,
+				value: 0
+			},
+			seeking: {
+				type: Boolean,
+				value: false
+			},
+			immediateValue: {
+				type: Number,
+				value: 0
+			},
+			startedLoad: {
+				type: Boolean,
+				value: false
+			},
+			firstPlay: {
+				type: Boolean,
+				value: true
 			}
 		},
 
@@ -48,18 +79,32 @@
 			'_srcChanged(src, requestSrc, autoLoad, mimeType)'
 		],
 
-		listeners: {
-			'media.loadedmetadata': '_onCanPlay',
-			'media.playing': '_onPlaying',
-			'media.pause': '_onPause',
-			'media.ended': '_onEnd',
-			'media.error': '_onError'
-		},
-
 		ready: function() {
 			this._resetPlayer();
 			var media = this.$.media;
 			media.volume = this.volume;
+
+			this._boundOnCanPlay = this._onCanPlay.bind(this);
+			this._boundOnPlaying = this._onPlaying.bind(this);
+			this._boundOnPause = this._onPause.bind(this);
+			this._boundOnEnd = this._onEnd.bind(this);
+			this._boundOnError = this._onError.bind(this);
+		},
+
+		attached: function() {
+			this.$.media.addEventListener('loadedmetadata', this._boundOnCanPlay);
+			this.$.media.addEventListener('playing', this._boundOnPlaying);
+			this.$.media.addEventListener('pause', this._boundOnPause);
+			this.$.media.addEventListener('ended', this._boundOnEnd);
+			this.$.media.addEventListener('error', this._boundOnError);
+		},
+
+		detached: function() {
+			this.$.media.removeEventListener('loadedmetadata', this._boundOnCanPlay);
+			this.$.media.removeEventListener('playing', this._boundOnPlaying);
+			this.$.media.removeEventListener('pause', this._boundOnPause);
+			this.$.media.removeEventListener('ended', this._boundOnEnd);
+			this.$.media.removeEventListener('error', this._boundOnError);
 		},
 
 		_srcChanged: function(src, requestSrc, autoLoad, mimeType) {
@@ -79,10 +124,12 @@
 				requestSrc = true;
 			}
 
-			if (requestSrc && autoLoad) {
+			if (requestSrc) {
 				this.mediaUrlRequest.url = src;
-				this._requestMediaUrl(false);
-			} else if (!requestSrc) {
+				if (autoLoad) {
+					this._requestMediaUrl(false);
+				}
+			} else {
 				this._resetPlayer();
 				this.$.media.src = src;
 			}
@@ -108,7 +155,7 @@
 
 			return this.mediaUrlRequest.generateRequest().completes
 				.then(function(event) {
-					if (!event.response.url) {
+					if (!event.response || !event.response.url) {
 						self.mediaStatus = 'invalidManifest';
 						return;
 					}
@@ -151,7 +198,11 @@
 			var self = this;
 			if (playPromise) {
 				playPromise.catch(function(error) {
-					self.fire('d2l-media-play-error', { error: error });
+					self.dispatchEvent(new CustomEvent('d2l-media-play-error', {
+						bubbles: true,
+						cancelable: true,
+						detail: { error: error }
+					}));
 				});
 			}
 		},
@@ -247,5 +298,6 @@
 		}
 	};
 
-	D2LMediaBehavior = [Polymer.IronRangeBehavior, MediaBehaviorImpl];
+	/** @polymerBehavior */
+	window.D2L.MediaBehavior = [Polymer.IronRangeBehavior, window.D2L.MediaBehaviorImpl];
 </script>

@@ -28,6 +28,13 @@
         "iron-ajax": "PolymerElements/iron-ajax#^1.4.3",
         "iron-range-behavior": "PolymerElements/iron-range-behavior#^1.0.0",
         "polymer": "Polymer/polymer#^1.0.0"
+      },
+      "devDependencies": {
+        "d2l-icons": "^3.8.0",
+        "d2l-seek-bar": "^0.1.0"
+      },
+      "resolutions": {
+        "webcomponentsjs": "^0.7.24"
       }
     }
   }

@@ -1,5 +1,8 @@
 <link rel="import" href="../../polymer/polymer.html">
 <link rel="import" href="../d2l-media-behavior.html">
+<link rel="import" href="../../d2l-icons/d2l-icon.html">
+<link rel="import" href="../../d2l-icons/tier3-icons.html">
+<link rel="import" href="../../d2l-seek-bar/d2l-seek-bar.html">
 
 <!--
 `media-test-element`
@@ -10,6 +13,11 @@
 
 <dom-module id="media-test-element">
   <template>
+		<style>
+			[hidden] {
+				display: none;
+			}
+		</style>
 		<video id="media" preload="{{ _getPreload(autoLoad) }}" poster="{{ poster }}"></video>
 
 		<div id="controlBar">
@@ -28,8 +36,11 @@
 		Polymer({
 			is: 'media-test-element',
 			behaviors: [
-				D2LMediaBehavior
-			]
+				window.D2L.MediaBehavior
+			],
+			properties: {
+				poster: String
+			}
 		});
   </script>
 </dom-module>

@@ -1,12 +1,12 @@
 {
   "name": "@d2l/media-behavior",
-  "version": "0.0.10",
+  "version": "1.0.0",
   "description": "Polymer behavior for media players",
   "scripts": {
-    "lint": "eslint *.html",
-    "postinstall": "bower install",
-    "start": "polymer serve -p 9998",
-    "test": "wct -l chrome",
+    "lint": "eslint *.html && polymer lint",
+    "postinstall": "polymer install --variants",
+    "start": "polymer serve",
+    "test": "polymer test -l chrome",
     "posttest": "npm run lint"
   },
   "repository": {
@@ -16,11 +16,10 @@
   "author": "D2L",
   "license": "UNLICENSED",
   "devDependencies": {
-    "bower": "^1.7.7",
-    "bower-art-resolver": "2.0.6",
-    "eslint": "^3.7.1",
+    "bower-art-resolver": "^2.0.6",
+    "eslint": "^3.19.0",
     "eslint-config-brightspace": "^0.2.4",
-    "eslint-plugin-html": "^1.5.3",
-    "polymer-cli": "^0.16.0"
+    "eslint-plugin-html": "^1.7.0",
+    "polymer-cli": "^1.6.0"
   }
 }

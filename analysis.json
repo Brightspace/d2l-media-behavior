@@ -1,0 +1,2976 @@
+{
+  "schema_version": "1.0.0",
+  "elements": [
+    {
+      "description": "`media-test-element`",
+      "summary": "",
+      "path": "test-elements/media-test-element.html",
+      "properties": [
+        {
+          "name": "value",
+          "type": "number",
+          "description": "The number that represents the current value.",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../bower_components/iron-range-behavior/iron-range-behavior.html",
+            "start": {
+              "line": 27,
+              "column": 4
+            },
+            "end": {
+              "line": 32,
+              "column": 5
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "notify": true
+            }
+          },
+          "defaultValue": "0",
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "name": "min",
+          "type": "number",
+          "description": "The number that indicates the minimum value of the range.",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../bower_components/iron-range-behavior/iron-range-behavior.html",
+            "start": {
+              "line": 37,
+              "column": 4
+            },
+            "end": {
+              "line": 41,
+              "column": 5
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "notify": true
+            }
+          },
+          "defaultValue": "0",
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "description": "The number that indicates the maximum value of the range.",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../bower_components/iron-range-behavior/iron-range-behavior.html",
+            "start": {
+              "line": 46,
+              "column": 4
+            },
+            "end": {
+              "line": 50,
+              "column": 5
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "notify": true
+            }
+          },
+          "defaultValue": "100",
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "name": "step",
+          "type": "number",
+          "description": "Specifies the value granularity of the range's value.",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../bower_components/iron-range-behavior/iron-range-behavior.html",
+            "start": {
+              "line": 55,
+              "column": 4
+            },
+            "end": {
+              "line": 59,
+              "column": 5
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "notify": true
+            }
+          },
+          "defaultValue": "1",
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "name": "ratio",
+          "type": "number",
+          "description": "Returns the ratio of the value.",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../bower_components/iron-range-behavior/iron-range-behavior.html",
+            "start": {
+              "line": 64,
+              "column": 4
+            },
+            "end": {
+              "line": 69,
+              "column": 5
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "notify": true,
+              "readOnly": true
+            }
+          },
+          "defaultValue": "0",
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "name": "src",
+          "type": "string",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 14,
+              "column": 3
+            },
+            "end": {
+              "line": 17,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "\"\"",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "autoLoad",
+          "type": "boolean",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 18,
+              "column": 3
+            },
+            "end": {
+              "line": 21,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "false",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "autoplay",
+          "type": "boolean",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 22,
+              "column": 3
+            },
+            "end": {
+              "line": 25,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "false",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "currentTime",
+          "type": "number",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 26,
+              "column": 3
+            },
+            "end": {
+              "line": 30,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "notify": true
+            }
+          },
+          "defaultValue": "0",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 31,
+              "column": 3
+            },
+            "end": {
+              "line": 34,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "0",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "requestSrc",
+          "type": "boolean",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 35,
+              "column": 3
+            },
+            "end": {
+              "line": 38,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "false",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "volume",
+          "type": "number",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 39,
+              "column": 3
+            },
+            "end": {
+              "line": 43,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "observer": "\"_volumeChanged\""
+            }
+          },
+          "defaultValue": "1",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "mediaStatus",
+          "type": "string",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 44,
+              "column": 3
+            },
+            "end": {
+              "line": 47,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "\"ready\"",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "mimeType",
+          "type": "string",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 48,
+              "column": 3
+            },
+            "end": {
+              "line": 51,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "\"\"",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "isPlaying",
+          "type": "boolean",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 52,
+              "column": 3
+            },
+            "end": {
+              "line": 55,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "false",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "ended",
+          "type": "boolean",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 56,
+              "column": 3
+            },
+            "end": {
+              "line": 59,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "false",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "percentComplete",
+          "type": "number",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 60,
+              "column": 3
+            },
+            "end": {
+              "line": 63,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "0",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "seeking",
+          "type": "boolean",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 64,
+              "column": 3
+            },
+            "end": {
+              "line": 67,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "false",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "immediateValue",
+          "type": "number",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 68,
+              "column": 3
+            },
+            "end": {
+              "line": 71,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "0",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "startedLoad",
+          "type": "boolean",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 72,
+              "column": 3
+            },
+            "end": {
+              "line": 75,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "false",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "firstPlay",
+          "type": "boolean",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 76,
+              "column": 3
+            },
+            "end": {
+              "line": 79,
+              "column": 4
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "true",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "poster",
+          "type": "string",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 41,
+              "column": 4
+            },
+            "end": {
+              "line": 41,
+              "column": 18
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          }
+        }
+      ],
+      "methods": [
+        {
+          "name": "_calcRatio",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../bower_components/iron-range-behavior/iron-range-behavior.html",
+            "start": {
+              "line": 76,
+              "column": 2
+            },
+            "end": {
+              "line": 78,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "value"
+            }
+          ],
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "name": "_clampValue",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../bower_components/iron-range-behavior/iron-range-behavior.html",
+            "start": {
+              "line": 80,
+              "column": 2
+            },
+            "end": {
+              "line": 82,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "value"
+            }
+          ],
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "name": "_calcStep",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../bower_components/iron-range-behavior/iron-range-behavior.html",
+            "start": {
+              "line": 84,
+              "column": 2
+            },
+            "end": {
+              "line": 106,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "value"
+            }
+          ],
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "name": "_validateValue",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../bower_components/iron-range-behavior/iron-range-behavior.html",
+            "start": {
+              "line": 108,
+              "column": 2
+            },
+            "end": {
+              "line": 112,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "name": "_update",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../bower_components/iron-range-behavior/iron-range-behavior.html",
+            "start": {
+              "line": 114,
+              "column": 2
+            },
+            "end": {
+              "line": 117,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "name": "ready",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 86,
+              "column": 2
+            },
+            "end": {
+              "line": 96,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "attached",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 98,
+              "column": 2
+            },
+            "end": {
+              "line": 104,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "detached",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 106,
+              "column": 2
+            },
+            "end": {
+              "line": 112,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_srcChanged",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 114,
+              "column": 2
+            },
+            "end": {
+              "line": 140,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "src"
+            },
+            {
+              "name": "requestSrc"
+            },
+            {
+              "name": "autoLoad"
+            },
+            {
+              "name": "mimeType"
+            }
+          ],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_resetPlayer",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 142,
+              "column": 2
+            },
+            "end": {
+              "line": 151,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_volumeChanged",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 153,
+              "column": 2
+            },
+            "end": {
+              "line": 155,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "volume"
+            }
+          ],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_requestMediaUrl",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 157,
+              "column": 2
+            },
+            "end": {
+              "line": 180,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "playAfterLoad"
+            }
+          ],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_playPause",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 182,
+              "column": 2
+            },
+            "end": {
+              "line": 199,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "event"
+            }
+          ],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_playHandler",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 201,
+              "column": 2
+            },
+            "end": {
+              "line": 212,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "playPromise"
+            }
+          ],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_getFormattedTime",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 214,
+              "column": 2
+            },
+            "end": {
+              "line": 216,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_getImmediateTime",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 218,
+              "column": 2
+            },
+            "end": {
+              "line": 220,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_formatTime",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 222,
+              "column": 2
+            },
+            "end": {
+              "line": 230,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "seconds"
+            }
+          ],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_onSeekStart",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 232,
+              "column": 2
+            },
+            "end": {
+              "line": 234,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_onSeekEnd",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 236,
+              "column": 2
+            },
+            "end": {
+              "line": 241,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_onCanPlay",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 243,
+              "column": 2
+            },
+            "end": {
+              "line": 248,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_onPlaying",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 250,
+              "column": 2
+            },
+            "end": {
+              "line": 255,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_onPause",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 257,
+              "column": 2
+            },
+            "end": {
+              "line": 259,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_onEnd",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 261,
+              "column": 2
+            },
+            "end": {
+              "line": 264,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_onError",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 266,
+              "column": 2
+            },
+            "end": {
+              "line": 268,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_updatePlayPosition",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 270,
+              "column": 2
+            },
+            "end": {
+              "line": 273,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "newTime"
+            }
+          ],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_startProgressTimer",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 275,
+              "column": 2
+            },
+            "end": {
+              "line": 294,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_getPreload",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 296,
+              "column": 2
+            },
+            "end": {
+              "line": 298,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "_getAutoplay",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 300,
+              "column": 2
+            },
+            "end": {
+              "line": 302,
+              "column": 3
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        }
+      ],
+      "staticMethods": [],
+      "demos": [
+        {
+          "url": "demo/index.html",
+          "description": ""
+        }
+      ],
+      "metadata": {},
+      "sourceRange": {
+        "start": {
+          "line": 35,
+          "column": 10
+        },
+        "end": {
+          "line": 43,
+          "column": 3
+        }
+      },
+      "privacy": "public",
+      "superclass": "HTMLElement",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The number that represents the current value.",
+          "sourceRange": {
+            "file": "../bower_components/iron-range-behavior/iron-range-behavior.html",
+            "start": {
+              "line": 27,
+              "column": 4
+            },
+            "end": {
+              "line": 32,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "type": "number",
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "name": "min",
+          "description": "The number that indicates the minimum value of the range.",
+          "sourceRange": {
+            "file": "../bower_components/iron-range-behavior/iron-range-behavior.html",
+            "start": {
+              "line": 37,
+              "column": 4
+            },
+            "end": {
+              "line": 41,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "type": "number",
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "name": "max",
+          "description": "The number that indicates the maximum value of the range.",
+          "sourceRange": {
+            "file": "../bower_components/iron-range-behavior/iron-range-behavior.html",
+            "start": {
+              "line": 46,
+              "column": 4
+            },
+            "end": {
+              "line": 50,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "type": "number",
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "name": "step",
+          "description": "Specifies the value granularity of the range's value.",
+          "sourceRange": {
+            "file": "../bower_components/iron-range-behavior/iron-range-behavior.html",
+            "start": {
+              "line": 55,
+              "column": 4
+            },
+            "end": {
+              "line": 59,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "type": "number",
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "name": "ratio",
+          "description": "Returns the ratio of the value.",
+          "sourceRange": {
+            "file": "../bower_components/iron-range-behavior/iron-range-behavior.html",
+            "start": {
+              "line": 64,
+              "column": 4
+            },
+            "end": {
+              "line": 69,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "type": "number",
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "name": "src",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 14,
+              "column": 3
+            },
+            "end": {
+              "line": 17,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "string",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "auto-load",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 18,
+              "column": 3
+            },
+            "end": {
+              "line": 21,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "boolean",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "autoplay",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 22,
+              "column": 3
+            },
+            "end": {
+              "line": 25,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "boolean",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "current-time",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 26,
+              "column": 3
+            },
+            "end": {
+              "line": 30,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "number",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "duration",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 31,
+              "column": 3
+            },
+            "end": {
+              "line": 34,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "number",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "request-src",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 35,
+              "column": 3
+            },
+            "end": {
+              "line": 38,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "boolean",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "volume",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 39,
+              "column": 3
+            },
+            "end": {
+              "line": 43,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "number",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "media-status",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 44,
+              "column": 3
+            },
+            "end": {
+              "line": 47,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "string",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "mime-type",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 48,
+              "column": 3
+            },
+            "end": {
+              "line": 51,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "string",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "is-playing",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 52,
+              "column": 3
+            },
+            "end": {
+              "line": 55,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "boolean",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "ended",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 56,
+              "column": 3
+            },
+            "end": {
+              "line": 59,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "boolean",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "percent-complete",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 60,
+              "column": 3
+            },
+            "end": {
+              "line": 63,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "number",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "seeking",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 64,
+              "column": 3
+            },
+            "end": {
+              "line": 67,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "boolean",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "immediate-value",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 68,
+              "column": 3
+            },
+            "end": {
+              "line": 71,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "number",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "started-load",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 72,
+              "column": 3
+            },
+            "end": {
+              "line": 75,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "boolean",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "first-play",
+          "description": "",
+          "sourceRange": {
+            "file": "../d2l-media-behavior.html",
+            "start": {
+              "line": 76,
+              "column": 3
+            },
+            "end": {
+              "line": 79,
+              "column": 4
+            }
+          },
+          "metadata": {},
+          "type": "boolean",
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "name": "poster",
+          "description": "",
+          "sourceRange": {
+            "start": {
+              "line": 41,
+              "column": 4
+            },
+            "end": {
+              "line": 41,
+              "column": 18
+            }
+          },
+          "metadata": {},
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "type": "CustomEvent",
+          "name": "value-changed",
+          "description": "Fired when the `value` property changes.",
+          "metadata": {},
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "type": "CustomEvent",
+          "name": "min-changed",
+          "description": "Fired when the `min` property changes.",
+          "metadata": {},
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "type": "CustomEvent",
+          "name": "max-changed",
+          "description": "Fired when the `max` property changes.",
+          "metadata": {},
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "type": "CustomEvent",
+          "name": "step-changed",
+          "description": "Fired when the `step` property changes.",
+          "metadata": {},
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "type": "CustomEvent",
+          "name": "ratio-changed",
+          "description": "Fired when the `ratio` property changes.",
+          "metadata": {},
+          "inheritedFrom": "Polymer.IronRangeBehavior"
+        },
+        {
+          "type": "CustomEvent",
+          "name": "d2l-media-play-error",
+          "description": "d2l-media-play-error",
+          "metadata": {},
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "type": "CustomEvent",
+          "name": "current-time-changed",
+          "description": "Fired when the `currentTime` property changes.",
+          "metadata": {},
+          "inheritedFrom": "window.D2L.MediaBehavior"
+        }
+      ],
+      "styling": {
+        "cssVariables": [],
+        "selectors": []
+      },
+      "slots": [],
+      "tagname": "media-test-element"
+    }
+  ],
+  "metadata": {
+    "polymer": {
+      "behaviors": [
+        {
+          "description": "",
+          "summary": "",
+          "path": "d2l-media-behavior.html",
+          "properties": [
+            {
+              "name": "value",
+              "type": "number",
+              "description": "The number that represents the current value.",
+              "privacy": "public",
+              "sourceRange": {
+                "file": "bower_components/iron-range-behavior/iron-range-behavior.html",
+                "start": {
+                  "line": 27,
+                  "column": 4
+                },
+                "end": {
+                  "line": 32,
+                  "column": 5
+                }
+              },
+              "metadata": {
+                "polymer": {
+                  "notify": true
+                }
+              },
+              "defaultValue": "0",
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "name": "min",
+              "type": "number",
+              "description": "The number that indicates the minimum value of the range.",
+              "privacy": "public",
+              "sourceRange": {
+                "file": "bower_components/iron-range-behavior/iron-range-behavior.html",
+                "start": {
+                  "line": 37,
+                  "column": 4
+                },
+                "end": {
+                  "line": 41,
+                  "column": 5
+                }
+              },
+              "metadata": {
+                "polymer": {
+                  "notify": true
+                }
+              },
+              "defaultValue": "0",
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "name": "max",
+              "type": "number",
+              "description": "The number that indicates the maximum value of the range.",
+              "privacy": "public",
+              "sourceRange": {
+                "file": "bower_components/iron-range-behavior/iron-range-behavior.html",
+                "start": {
+                  "line": 46,
+                  "column": 4
+                },
+                "end": {
+                  "line": 50,
+                  "column": 5
+                }
+              },
+              "metadata": {
+                "polymer": {
+                  "notify": true
+                }
+              },
+              "defaultValue": "100",
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "name": "step",
+              "type": "number",
+              "description": "Specifies the value granularity of the range's value.",
+              "privacy": "public",
+              "sourceRange": {
+                "file": "bower_components/iron-range-behavior/iron-range-behavior.html",
+                "start": {
+                  "line": 55,
+                  "column": 4
+                },
+                "end": {
+                  "line": 59,
+                  "column": 5
+                }
+              },
+              "metadata": {
+                "polymer": {
+                  "notify": true
+                }
+              },
+              "defaultValue": "1",
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "name": "ratio",
+              "type": "number",
+              "description": "Returns the ratio of the value.",
+              "privacy": "public",
+              "sourceRange": {
+                "file": "bower_components/iron-range-behavior/iron-range-behavior.html",
+                "start": {
+                  "line": 64,
+                  "column": 4
+                },
+                "end": {
+                  "line": 69,
+                  "column": 5
+                }
+              },
+              "metadata": {
+                "polymer": {
+                  "notify": true,
+                  "readOnly": true
+                }
+              },
+              "defaultValue": "0",
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "name": "src",
+              "type": "string",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 14,
+                  "column": 3
+                },
+                "end": {
+                  "line": 17,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {}
+              },
+              "defaultValue": "\"\""
+            },
+            {
+              "name": "autoLoad",
+              "type": "boolean",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 18,
+                  "column": 3
+                },
+                "end": {
+                  "line": 21,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {}
+              },
+              "defaultValue": "false"
+            },
+            {
+              "name": "autoplay",
+              "type": "boolean",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 22,
+                  "column": 3
+                },
+                "end": {
+                  "line": 25,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {}
+              },
+              "defaultValue": "false"
+            },
+            {
+              "name": "currentTime",
+              "type": "number",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 26,
+                  "column": 3
+                },
+                "end": {
+                  "line": 30,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {
+                  "notify": true
+                }
+              },
+              "defaultValue": "0"
+            },
+            {
+              "name": "duration",
+              "type": "number",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 31,
+                  "column": 3
+                },
+                "end": {
+                  "line": 34,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {}
+              },
+              "defaultValue": "0"
+            },
+            {
+              "name": "requestSrc",
+              "type": "boolean",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 35,
+                  "column": 3
+                },
+                "end": {
+                  "line": 38,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {}
+              },
+              "defaultValue": "false"
+            },
+            {
+              "name": "volume",
+              "type": "number",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 39,
+                  "column": 3
+                },
+                "end": {
+                  "line": 43,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {
+                  "observer": "\"_volumeChanged\""
+                }
+              },
+              "defaultValue": "1"
+            },
+            {
+              "name": "mediaStatus",
+              "type": "string",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 44,
+                  "column": 3
+                },
+                "end": {
+                  "line": 47,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {}
+              },
+              "defaultValue": "\"ready\""
+            },
+            {
+              "name": "mimeType",
+              "type": "string",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 48,
+                  "column": 3
+                },
+                "end": {
+                  "line": 51,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {}
+              },
+              "defaultValue": "\"\""
+            },
+            {
+              "name": "isPlaying",
+              "type": "boolean",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 52,
+                  "column": 3
+                },
+                "end": {
+                  "line": 55,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {}
+              },
+              "defaultValue": "false"
+            },
+            {
+              "name": "ended",
+              "type": "boolean",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 56,
+                  "column": 3
+                },
+                "end": {
+                  "line": 59,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {}
+              },
+              "defaultValue": "false"
+            },
+            {
+              "name": "percentComplete",
+              "type": "number",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 60,
+                  "column": 3
+                },
+                "end": {
+                  "line": 63,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {}
+              },
+              "defaultValue": "0"
+            },
+            {
+              "name": "seeking",
+              "type": "boolean",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 64,
+                  "column": 3
+                },
+                "end": {
+                  "line": 67,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {}
+              },
+              "defaultValue": "false"
+            },
+            {
+              "name": "immediateValue",
+              "type": "number",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 68,
+                  "column": 3
+                },
+                "end": {
+                  "line": 71,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {}
+              },
+              "defaultValue": "0"
+            },
+            {
+              "name": "startedLoad",
+              "type": "boolean",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 72,
+                  "column": 3
+                },
+                "end": {
+                  "line": 75,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {}
+              },
+              "defaultValue": "false"
+            },
+            {
+              "name": "firstPlay",
+              "type": "boolean",
+              "description": "",
+              "privacy": "public",
+              "sourceRange": {
+                "start": {
+                  "line": 76,
+                  "column": 3
+                },
+                "end": {
+                  "line": 79,
+                  "column": 4
+                }
+              },
+              "metadata": {
+                "polymer": {}
+              },
+              "defaultValue": "true"
+            }
+          ],
+          "methods": [
+            {
+              "name": "_calcRatio",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "file": "bower_components/iron-range-behavior/iron-range-behavior.html",
+                "start": {
+                  "line": 76,
+                  "column": 2
+                },
+                "end": {
+                  "line": 78,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": [
+                {
+                  "name": "value"
+                }
+              ],
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "name": "_clampValue",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "file": "bower_components/iron-range-behavior/iron-range-behavior.html",
+                "start": {
+                  "line": 80,
+                  "column": 2
+                },
+                "end": {
+                  "line": 82,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": [
+                {
+                  "name": "value"
+                }
+              ],
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "name": "_calcStep",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "file": "bower_components/iron-range-behavior/iron-range-behavior.html",
+                "start": {
+                  "line": 84,
+                  "column": 2
+                },
+                "end": {
+                  "line": 106,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": [
+                {
+                  "name": "value"
+                }
+              ],
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "name": "_validateValue",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "file": "bower_components/iron-range-behavior/iron-range-behavior.html",
+                "start": {
+                  "line": 108,
+                  "column": 2
+                },
+                "end": {
+                  "line": 112,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": [],
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "name": "_update",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "file": "bower_components/iron-range-behavior/iron-range-behavior.html",
+                "start": {
+                  "line": 114,
+                  "column": 2
+                },
+                "end": {
+                  "line": 117,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": [],
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "name": "ready",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 86,
+                  "column": 2
+                },
+                "end": {
+                  "line": 96,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            },
+            {
+              "name": "attached",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 98,
+                  "column": 2
+                },
+                "end": {
+                  "line": 104,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            },
+            {
+              "name": "detached",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 106,
+                  "column": 2
+                },
+                "end": {
+                  "line": 112,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            },
+            {
+              "name": "_srcChanged",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 114,
+                  "column": 2
+                },
+                "end": {
+                  "line": 140,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": [
+                {
+                  "name": "src"
+                },
+                {
+                  "name": "requestSrc"
+                },
+                {
+                  "name": "autoLoad"
+                },
+                {
+                  "name": "mimeType"
+                }
+              ]
+            },
+            {
+              "name": "_resetPlayer",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 142,
+                  "column": 2
+                },
+                "end": {
+                  "line": 151,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            },
+            {
+              "name": "_volumeChanged",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 153,
+                  "column": 2
+                },
+                "end": {
+                  "line": 155,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": [
+                {
+                  "name": "volume"
+                }
+              ]
+            },
+            {
+              "name": "_requestMediaUrl",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 157,
+                  "column": 2
+                },
+                "end": {
+                  "line": 180,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": [
+                {
+                  "name": "playAfterLoad"
+                }
+              ]
+            },
+            {
+              "name": "_playPause",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 182,
+                  "column": 2
+                },
+                "end": {
+                  "line": 199,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": [
+                {
+                  "name": "event"
+                }
+              ]
+            },
+            {
+              "name": "_playHandler",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 201,
+                  "column": 2
+                },
+                "end": {
+                  "line": 212,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": [
+                {
+                  "name": "playPromise"
+                }
+              ]
+            },
+            {
+              "name": "_getFormattedTime",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 214,
+                  "column": 2
+                },
+                "end": {
+                  "line": 216,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            },
+            {
+              "name": "_getImmediateTime",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 218,
+                  "column": 2
+                },
+                "end": {
+                  "line": 220,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            },
+            {
+              "name": "_formatTime",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 222,
+                  "column": 2
+                },
+                "end": {
+                  "line": 230,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": [
+                {
+                  "name": "seconds"
+                }
+              ]
+            },
+            {
+              "name": "_onSeekStart",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 232,
+                  "column": 2
+                },
+                "end": {
+                  "line": 234,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            },
+            {
+              "name": "_onSeekEnd",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 236,
+                  "column": 2
+                },
+                "end": {
+                  "line": 241,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            },
+            {
+              "name": "_onCanPlay",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 243,
+                  "column": 2
+                },
+                "end": {
+                  "line": 248,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            },
+            {
+              "name": "_onPlaying",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 250,
+                  "column": 2
+                },
+                "end": {
+                  "line": 255,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            },
+            {
+              "name": "_onPause",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 257,
+                  "column": 2
+                },
+                "end": {
+                  "line": 259,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            },
+            {
+              "name": "_onEnd",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 261,
+                  "column": 2
+                },
+                "end": {
+                  "line": 264,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            },
+            {
+              "name": "_onError",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 266,
+                  "column": 2
+                },
+                "end": {
+                  "line": 268,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            },
+            {
+              "name": "_updatePlayPosition",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 270,
+                  "column": 2
+                },
+                "end": {
+                  "line": 273,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": [
+                {
+                  "name": "newTime"
+                }
+              ]
+            },
+            {
+              "name": "_startProgressTimer",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 275,
+                  "column": 2
+                },
+                "end": {
+                  "line": 294,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            },
+            {
+              "name": "_getPreload",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 296,
+                  "column": 2
+                },
+                "end": {
+                  "line": 298,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            },
+            {
+              "name": "_getAutoplay",
+              "description": "",
+              "privacy": "protected",
+              "sourceRange": {
+                "start": {
+                  "line": 300,
+                  "column": 2
+                },
+                "end": {
+                  "line": 302,
+                  "column": 3
+                }
+              },
+              "metadata": {},
+              "params": []
+            }
+          ],
+          "staticMethods": [],
+          "demos": [],
+          "metadata": {},
+          "sourceRange": {
+            "start": {
+              "line": 7,
+              "column": 1
+            },
+            "end": {
+              "line": 303,
+              "column": 3
+            }
+          },
+          "privacy": "public",
+          "name": "window.D2L.MediaBehavior",
+          "attributes": [
+            {
+              "name": "value",
+              "description": "The number that represents the current value.",
+              "sourceRange": {
+                "file": "bower_components/iron-range-behavior/iron-range-behavior.html",
+                "start": {
+                  "line": 27,
+                  "column": 4
+                },
+                "end": {
+                  "line": 32,
+                  "column": 5
+                }
+              },
+              "metadata": {},
+              "type": "number",
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "name": "min",
+              "description": "The number that indicates the minimum value of the range.",
+              "sourceRange": {
+                "file": "bower_components/iron-range-behavior/iron-range-behavior.html",
+                "start": {
+                  "line": 37,
+                  "column": 4
+                },
+                "end": {
+                  "line": 41,
+                  "column": 5
+                }
+              },
+              "metadata": {},
+              "type": "number",
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "name": "max",
+              "description": "The number that indicates the maximum value of the range.",
+              "sourceRange": {
+                "file": "bower_components/iron-range-behavior/iron-range-behavior.html",
+                "start": {
+                  "line": 46,
+                  "column": 4
+                },
+                "end": {
+                  "line": 50,
+                  "column": 5
+                }
+              },
+              "metadata": {},
+              "type": "number",
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "name": "step",
+              "description": "Specifies the value granularity of the range's value.",
+              "sourceRange": {
+                "file": "bower_components/iron-range-behavior/iron-range-behavior.html",
+                "start": {
+                  "line": 55,
+                  "column": 4
+                },
+                "end": {
+                  "line": 59,
+                  "column": 5
+                }
+              },
+              "metadata": {},
+              "type": "number",
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "name": "ratio",
+              "description": "Returns the ratio of the value.",
+              "sourceRange": {
+                "file": "bower_components/iron-range-behavior/iron-range-behavior.html",
+                "start": {
+                  "line": 64,
+                  "column": 4
+                },
+                "end": {
+                  "line": 69,
+                  "column": 5
+                }
+              },
+              "metadata": {},
+              "type": "number",
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "name": "src",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 14,
+                  "column": 3
+                },
+                "end": {
+                  "line": 17,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "string"
+            },
+            {
+              "name": "auto-load",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 18,
+                  "column": 3
+                },
+                "end": {
+                  "line": 21,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "boolean"
+            },
+            {
+              "name": "autoplay",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 22,
+                  "column": 3
+                },
+                "end": {
+                  "line": 25,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "boolean"
+            },
+            {
+              "name": "current-time",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 26,
+                  "column": 3
+                },
+                "end": {
+                  "line": 30,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "number"
+            },
+            {
+              "name": "duration",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 31,
+                  "column": 3
+                },
+                "end": {
+                  "line": 34,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "number"
+            },
+            {
+              "name": "request-src",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 35,
+                  "column": 3
+                },
+                "end": {
+                  "line": 38,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "boolean"
+            },
+            {
+              "name": "volume",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 39,
+                  "column": 3
+                },
+                "end": {
+                  "line": 43,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "number"
+            },
+            {
+              "name": "media-status",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 44,
+                  "column": 3
+                },
+                "end": {
+                  "line": 47,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "string"
+            },
+            {
+              "name": "mime-type",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 48,
+                  "column": 3
+                },
+                "end": {
+                  "line": 51,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "string"
+            },
+            {
+              "name": "is-playing",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 52,
+                  "column": 3
+                },
+                "end": {
+                  "line": 55,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "boolean"
+            },
+            {
+              "name": "ended",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 56,
+                  "column": 3
+                },
+                "end": {
+                  "line": 59,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "boolean"
+            },
+            {
+              "name": "percent-complete",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 60,
+                  "column": 3
+                },
+                "end": {
+                  "line": 63,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "number"
+            },
+            {
+              "name": "seeking",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 64,
+                  "column": 3
+                },
+                "end": {
+                  "line": 67,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "boolean"
+            },
+            {
+              "name": "immediate-value",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 68,
+                  "column": 3
+                },
+                "end": {
+                  "line": 71,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "number"
+            },
+            {
+              "name": "started-load",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 72,
+                  "column": 3
+                },
+                "end": {
+                  "line": 75,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "boolean"
+            },
+            {
+              "name": "first-play",
+              "description": "",
+              "sourceRange": {
+                "start": {
+                  "line": 76,
+                  "column": 3
+                },
+                "end": {
+                  "line": 79,
+                  "column": 4
+                }
+              },
+              "metadata": {},
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "type": "CustomEvent",
+              "name": "value-changed",
+              "description": "Fired when the `value` property changes.",
+              "metadata": {},
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "type": "CustomEvent",
+              "name": "min-changed",
+              "description": "Fired when the `min` property changes.",
+              "metadata": {},
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "type": "CustomEvent",
+              "name": "max-changed",
+              "description": "Fired when the `max` property changes.",
+              "metadata": {},
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "type": "CustomEvent",
+              "name": "step-changed",
+              "description": "Fired when the `step` property changes.",
+              "metadata": {},
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "type": "CustomEvent",
+              "name": "ratio-changed",
+              "description": "Fired when the `ratio` property changes.",
+              "metadata": {},
+              "inheritedFrom": "Polymer.IronRangeBehavior"
+            },
+            {
+              "type": "CustomEvent",
+              "name": "d2l-media-play-error",
+              "description": "d2l-media-play-error",
+              "metadata": {}
+            },
+            {
+              "type": "CustomEvent",
+              "name": "current-time-changed",
+              "description": "Fired when the `currentTime` property changes.",
+              "metadata": {}
+            }
+          ],
+          "styling": {
+            "cssVariables": [],
+            "selectors": []
+          },
+          "slots": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script>
+      /*
+      window.Polymer = window.Polymer || {};
+      window.Polymer.dom = 'shadow';
+      */
+    </script>
+		<link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+		<link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../test-elements/media-test-element.html">
+
+		<custom-style>
+			<style is="custom-style" include="demo-pages-shared-styles">
+			</style>
+		</custom-style>
+  </head>
+  <body>
+		<h1>d2l-media-behavior</h1>
+		<demo-snippet>
+			<template>
+				<media-test-element src="testvideo.mp4"></media-test-element>
+			</template>
+		</demo-snippet>
+		<demo-snippet>
+			<template>
+				<media-test-element src="manifest.json" request-src></media-test-element>
+			</template>
+		</demo-snippet>
+  </body>
+</html>

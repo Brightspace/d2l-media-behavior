@@ -490,11 +490,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 41,
+              "line": 46,
               "column": 4
             },
             "end": {
-              "line": 41,
+              "line": 46,
               "column": 18
             }
           },
@@ -1100,7 +1100,7 @@
           "column": 10
         },
         "end": {
-          "line": 43,
+          "line": 48,
           "column": 3
         }
       },
@@ -1490,11 +1490,11 @@
           "description": "",
           "sourceRange": {
             "start": {
-              "line": 41,
+              "line": 46,
               "column": 4
             },
             "end": {
-              "line": 41,
+              "line": 46,
               "column": 18
             }
           },
@@ -1544,6 +1544,12 @@
           "description": "Fired when the `currentTime` property changes.",
           "metadata": {},
           "inheritedFrom": "window.D2L.MediaBehavior"
+        },
+        {
+          "type": "CustomEvent",
+          "name": "d2l-media-play-error",
+          "description": "d2l-media-play-error",
+          "metadata": {}
         }
       ],
       "styling": {

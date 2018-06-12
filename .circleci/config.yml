@@ -9,13 +9,9 @@ jobs:
       - checkout
 
       - restore_cache:
-          keys:
-            - v1-package-{{ checksum "package.json" }}
-            - v1-package-
+          key: v1-package-{{ checksum "package.json" }}
       - restore_cache:
-          keys:
-            - v1-bower-{{ checksum "bower.json" }}
-            - v1-bower-
+          key: v1-bower-{{ checksum "bower.json" }}
 
       - run: npm install
       - run: npm test

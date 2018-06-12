@@ -7,16 +7,27 @@ jobs:
 
     steps:
       - checkout
+
       - restore_cache:
           keys:
-            - v1-{{ checksum "package.json" }}
-            - v1-
+            - v1-package-{{ checksum "package.json" }}
+            - v1-package-
+      - restore_cache:
+          keys:
+            - v1-bower-{{ checksum "bower.json" }}
+            - v1-bower-
+
       - run: npm install
       - run: npm test
+
       - save_cache:
           paths:
             - node_modules
-          key: v1-{{ checksum "package.json" }}
+          key: v1-package-{{ checksum "package.json" }}
+      - save_cache:
+          paths:
+            - bower_components
+          key: v1-bower-{{ checksum "bower.json" }}
 
   publish:
     docker:

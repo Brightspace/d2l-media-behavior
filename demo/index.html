@@ -1,62 +1,59 @@
 <!doctype html>
 <html>
   <head>
-	<script src="../../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
-	<script type="module">
-import '../../../@polymer/iron-demo-helpers/demo-pages-shared-styles.js';
-import '../../../@polymer/iron-demo-helpers/demo-snippet.js';
-import '../test-elements/media-test-element.js';
-</script>
-		<script type="module" src="../../../@polymer/iron-demo-helpers/demo-pages-shared-styles.js"></script>
-		<script type="module" src="../../../@polymer/iron-demo-helpers/demo-snippet.js"></script>
-	<script type="module" src="../test-elements/media-test-element.js"></script>
+		<script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+		<script type="module">
+			import '@polymer/iron-demo-helpers/demo-pages-shared-styles.js';
+			import '@polymer/iron-demo-helpers/demo-snippet.js';
+			import '../test-elements/media-test-element.js';
+		</script>
 
-		<!-- FIXME(polymer-modulizer):
-		These imperative modules that innerHTML your HTML are
-		a hacky way to be sure that any mixins in included style
-		modules are ready before any elements that reference them are
-		instantiated, otherwise the CSS @apply mixin polyfill won't be
-		able to expand the underlying CSS custom properties.
-		See: https://github.com/Polymer/polymer-modulizer/issues/154
-		-->
-	<script type="module">
-const $_documentContainer = document.createElement('template');
+			<!-- FIXME(polymer-modulizer):
+			These imperative modules that innerHTML your HTML are
+			a hacky way to be sure that any mixins in included style
+			modules are ready before any elements that reference them are
+			instantiated, otherwise the CSS @apply mixin polyfill won't be
+			able to expand the underlying CSS custom properties.
+			See: https://github.com/Polymer/polymer-modulizer/issues/154
+			-->
+		<script type="module">
+			const $_documentContainer = document.createElement('template');
 
-$_documentContainer.innerHTML = `<custom-style>
-			<style is="custom-style" include="demo-pages-shared-styles">
-			</style>
-		</custom-style>`;
+			$_documentContainer.innerHTML = `<custom-style>
+				<style is="custom-style" include="demo-pages-shared-styles">
+				</style>
+			</custom-style>`;
 
-document.body.appendChild($_documentContainer.content);
-</script>
+			document.body.appendChild($_documentContainer.content);
+		</script>
   </head>
   <body>
 		<script type="module">
-const $_documentContainer = document.createElement('template');
-$_documentContainer.innerHTML = `<h1>d2l-media-behavior</h1>`;
-document.body.appendChild($_documentContainer.content);
-</script>
+			const $_documentContainer = document.createElement('template');
+			$_documentContainer.innerHTML = '<h1>d2l-media-behavior</h1>';
+			document.body.appendChild($_documentContainer.content);
+		</script>
 		<script type="module">
-const $_documentContainer = document.createElement('template');
+			const $_documentContainer = document.createElement('template');
 
-$_documentContainer.innerHTML = `<demo-snippet>
+			$_documentContainer.innerHTML = `<demo-snippet>
 			<template>
 				<media-test-element src="testvideo.mp4"></media-test-element>
 			</template>
 		</demo-snippet>`;
 
-document.body.appendChild($_documentContainer.content);
-</script>
+			document.body.appendChild($_documentContainer.content);
+		</script>
 		<script type="module">
-const $_documentContainer = document.createElement('template');
+			const $_documentContainer = document.createElement('template');
 
-$_documentContainer.innerHTML = `<demo-snippet>
+			$_documentContainer.innerHTML = `<demo-snippet>
 			<template>
 				<media-test-element src="manifest.json" request-src=""></media-test-element>
 			</template>
 		</demo-snippet>`;
 
-document.body.appendChild($_documentContainer.content);
-</script>
+			document.body.appendChild($_documentContainer.content);
+		</script>
   </body>
 </html>

@@ -1,21 +1,14 @@
 /**
 `media-test-element`
-
-
 @demo demo/index.html
 */
-/*
-  FIXME(polymer-modulizer): the above comments were extracted
-  from HTML and may be out of place here. Review them and
-  then delete this comment!
-*/
-import '../../../@polymer/polymer/polymer-legacy.js';
+import '@polymer/polymer/polymer-legacy.js';
 
 import '../d2l-media-behavior.js';
-import '../../../d2l-icons/d2l-icon.js';
-import '../../../d2l-icons/tier3-icons.js';
-import '../../../d2l-seek-bar/d2l-seek-bar.js';
-import { Polymer } from '../../../@polymer/polymer/lib/legacy/polymer-fn.js';
+import 'd2l-icons/d2l-icon.js';
+import 'd2l-icons/tier3-icons.js';
+import '@d2l/seek-bar/d2l-seek-bar.js';
+import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
 const $_documentContainer = document.createElement('template');
 
 $_documentContainer.innerHTML = `<dom-module id="media-test-element">
@@ -39,7 +32,6 @@ $_documentContainer.innerHTML = `<dom-module id="media-test-element">
 		</div>
   </template>
 
-  
 </dom-module>`;
 
 document.head.appendChild($_documentContainer.content);

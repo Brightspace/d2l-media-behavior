@@ -1,5 +1,5 @@
-import { IronRangeBehavior } from '../../@polymer/iron-range-behavior/iron-range-behavior.js';
-import '../../@polymer/iron-ajax/iron-ajax.js';
+import { IronRangeBehavior } from '@polymer/iron-range-behavior/iron-range-behavior.js';
+import '@polymer/iron-ajax/iron-ajax.js';
 window.D2L = window.D2L || {};
 /** @polymerBehavior window.D2L.MediaBehavior */
 window.D2L.MediaBehaviorImpl = {

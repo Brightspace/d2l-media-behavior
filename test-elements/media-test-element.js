@@ -1,18 +1,18 @@
-<link rel="import" href="../../polymer/polymer.html">
-<link rel="import" href="../d2l-media-behavior.html">
-<link rel="import" href="../../d2l-icons/d2l-icon.html">
-<link rel="import" href="../../d2l-icons/tier3-icons.html">
-<link rel="import" href="../../d2l-seek-bar/d2l-seek-bar.html">
-
-<!--
+/**
 `media-test-element`
-
-
 @demo demo/index.html
--->
+*/
+import '@polymer/polymer/polymer-legacy.js';
 
-<dom-module id="media-test-element">
-  <template>
+import '../d2l-media-behavior.js';
+import 'd2l-icons/d2l-icon.js';
+import 'd2l-icons/tier3-icons.js';
+import '@d2l/seek-bar/d2l-seek-bar.js';
+import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<dom-module id="media-test-element">
+  <template strip-whitespace="">
 		<style>
 			[hidden] {
 				display: none;
@@ -32,15 +32,15 @@
 		</div>
   </template>
 
-  <script>
-		Polymer({
-			is: 'media-test-element',
-			behaviors: [
-				window.D2L.MediaBehavior
-			],
-			properties: {
-				poster: String
-			}
-		});
-  </script>
-</dom-module>
+</dom-module>`;
+
+document.head.appendChild($_documentContainer.content);
+Polymer({
+	is: 'media-test-element',
+	behaviors: [
+		window.D2L.MediaBehavior
+	],
+	properties: {
+		poster: String
+	}
+});

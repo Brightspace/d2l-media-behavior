@@ -15,7 +15,6 @@ jobs:
           name: Authenticate with Artifactory
           command: curl -ks -u$ARTIFACTORY_USER:$ARTIFACTORY_PASS "https://d2lartifacts.artifactoryonline.com/d2lartifacts/api/npm/npm-local/auth/d2l" -o ~/project/.npmrc
 
-      - run: sudo npm install -g npm@6.4.1
       - run: npm install
       - run: npm test
 
@@ -38,10 +37,8 @@ jobs:
       - run:
           name: Authenticate with Artifactory
           command: curl -ks -u$ARTIFACTORY_USER:$ARTIFACTORY_PASS "https://d2lartifacts.artifactoryonline.com/d2lartifacts/api/npm/npm-local/auth/d2l" -o ~/project/.npmrc
-      - run:
-          command: |
-            npm install publish
-            ./node_modules/.bin/publish
+      - run: sudo npm install -g publish
+      - run: publish
 
 workflows:
   version: 2

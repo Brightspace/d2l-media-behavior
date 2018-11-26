@@ -15,6 +15,7 @@ jobs:
           name: Authenticate with Artifactory
           command: curl -ks -u$ARTIFACTORY_USER:$ARTIFACTORY_PASS "https://d2lartifacts.artifactoryonline.com/d2lartifacts/api/npm/npm-local/auth/d2l" -o ~/project/.npmrc
 
+      - run: npm install -g npm@6.4.1
       - run: npm install
       - run: npm test
 

@@ -6,10 +6,11 @@
 
 		<title>d2l-media-behavior test</title>
 
-		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-		<script src="../../web-component-tester/browser.js"></script>
+		<script src="../node_modules/@babel/polyfill/browser.js"></script>
+		<script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+		<script src="../node_modules/wct-browser-legacy/browser.js"></script>
 
-		<link rel="import" href="../test-elements/media-test-element.html">
+		<script type="module" src="../test-elements/media-test-element.js"></script>
 	</head>
 	<body>
 		<test-fixture id="basic">
@@ -18,7 +19,8 @@
 			</template>
 		</test-fixture>
 
-		<script>
+		<script type="module">
+			import '../test-elements/media-test-element.js';
 			suite('media-test-element', function() {
 				test('instantiating the element works', function() {
 					var element = fixture('basic');

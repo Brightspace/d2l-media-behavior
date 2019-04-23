@@ -11,10 +11,6 @@ jobs:
       - restore_cache:
           key: v1-package-{{ checksum "package.json" }}
 
-      - run:
-          name: Authenticate with Artifactory
-          command: curl -ks -u$ARTIFACTORY_USER:$ARTIFACTORY_PASS "https://d2lartifacts.artifactoryonline.com/d2lartifacts/api/npm/npm-local/auth/d2l" -o ~/project/.npmrc
-
       - run: npm install
       - run: npm test
 
@@ -27,32 +23,9 @@ jobs:
           root: ~/project
           paths: .
 
-  publish:
-    docker:
-      - image: circleci/node:8.11-browsers
-
-    steps:
-      - attach_workspace:
-          at: ~/project
-      - run:
-          name: Authenticate with Artifactory
-          command: curl -ks -u$ARTIFACTORY_USER:$ARTIFACTORY_PASS "https://d2lartifacts.artifactoryonline.com/d2lartifacts/api/npm/npm-local/auth/d2l" -o ~/project/.npmrc
-      - run: sudo npm install -g publish
-      - run: publish
-
 workflows:
   version: 2
 
-  build-and-publish:
+  build:
     jobs:
-      - build:
-          context: ci-read
-      - publish:
-          context: ci-write
-          requires:
-            - build
-          filters:
-            branches:
-              only:
-                - master
-                - /^release.*/
+      - build

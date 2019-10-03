@@ -238,6 +238,10 @@ window.D2L.MediaBehaviorImpl = {
 		}
 	},
 
+	_onPositionChange: function() {
+		this._updatePlayPosition(this._getImmediateTime());
+	},
+
 	_onCanPlay: function() {
 		this.canBePlayed = true;
 

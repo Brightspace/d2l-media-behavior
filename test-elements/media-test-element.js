@@ -22,8 +22,8 @@ $_documentContainer.innerHTML = `<dom-module id="media-test-element">
 
 		<div id="controlBar">
 			<div class="control play-pause-container">
-				<d2l-icon hidden$="{{ isPlaying }}" icon="d2l-tier3:play" on-tap="_playPause"></d2l-icon>
-				<d2l-icon hidden$="{{ !isPlaying }}" icon="d2l-tier3:pause" on-tap="_playPause"></d2l-icon>
+				<d2l-icon hidden$="[[ isPlaying ]]" icon="d2l-tier3:play" on-tap="_playPause"></d2l-icon>
+				<d2l-icon hidden$="[[ !isPlaying ]]" icon="d2l-tier3:pause" on-tap="_playPause"></d2l-icon>
 			</div>
 			<div class="seek-control">
 				<d2l-seek-bar value="[[ percentComplete ]]" immediate-value="{{ immediateValue }}" on-drag-start="_onSeekStart" on-drag-end="_onSeekEnd"></d2l-seek-bar>

@@ -31,7 +31,6 @@ $_documentContainer.innerHTML = `<dom-module id="media-test-element">
 			<div class="time control">{{ _formatTime(currentTime) }} / {{ _formatTime(duration) }}</div>
 		</div>
   </template>
-
 </dom-module>`;
 
 document.head.appendChild($_documentContainer.content);
